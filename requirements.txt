@@ -1,4 +1,4 @@
 gunicorn
 flask
 chatterbot
-"pymongo[srv]"
+pymongo[srv]
