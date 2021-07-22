@@ -13,8 +13,7 @@ chatbot = ChatBot("ChineseChatBot",
 
 @app.route('/<faq>')
 def hello(faq):
-    #gc.collect()
-    return faq
+    return chatbot.get_response(faq).text
 
 
 if __name__ == 'main':
