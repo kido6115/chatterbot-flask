@@ -1,6 +1,6 @@
 from flask import Flask, request
 from chatterbot import ChatBot
-
+import os 
 app = Flask(__name__)
 chatbot = ChatBot("ChineseChatBot",
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
@@ -13,4 +13,4 @@ def hello(faq):
 
 
 if __name__ == 'main':
-    app.run() 
+    app.run(host='0.0.0.0',port = int(os.environ.get("PORT", 5000))) 
