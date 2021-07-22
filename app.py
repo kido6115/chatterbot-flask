@@ -1,6 +1,10 @@
 from flask import Flask, request
 from chatterbot import ChatBot
 import os 
+import gc
+
+
+
 app = Flask(__name__)
 chatbot = ChatBot("ChineseChatBot",
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
@@ -9,6 +13,7 @@ chatbot = ChatBot("ChineseChatBot",
 
 @app.route('/<faq>')
 def hello(faq):
+    gc.collect()
     return faq
 
 
