@@ -1,6 +1,6 @@
 from flask import Flask, request
 from chatterbot import ChatBot
-#import os 
+import os 
 #import gc
 
 
@@ -17,4 +17,4 @@ def hello(faq):
 
 
 if __name__ == 'main':
-    app.run() 
+    app.run(debug=True,port=os.environ['PORT']) 
