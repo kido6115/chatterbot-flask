@@ -1,5 +1,5 @@
 from flask import Flask, request
-from chatterbot import ChatBot
+#from chatterbot import ChatBot
 #import os 
 import gc
 
