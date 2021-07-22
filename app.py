@@ -9,7 +9,7 @@ chatbot = ChatBot("ChineseChatBot",
 
 @app.route('/<faq>')
 def hello(faq):
-    return chatbot.get_response(faq).text
+    return faq
 
 
 if __name__ == 'main':
