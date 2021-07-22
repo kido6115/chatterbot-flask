@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/<faq>')
 def hello(faq):
-    gc.collect()
+    #gc.collect()
     return faq
 
 
