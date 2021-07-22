@@ -3,5 +3,3 @@ flask
 chatterbot
 pymongo[srv]
 spacy==2.1.8
-en
-en_core_web_md
